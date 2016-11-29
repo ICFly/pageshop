@@ -1,0 +1,13 @@
+<script>
++function(){
+    window.addEventListener('error', function(errorMessage, scriptURI, lineNumber,columnNumber,errorObj) {
+
+        var errmsg = "ErrorMessage：" + errorMessage + "\n";
+            errmsg +="ErrorFile：" + scriptURI + "\n";
+            errmsg +="ErrorRow：" + lineNumber + "\n";
+            errmsg +="Errorcolumn：" + columnNumber + "\n";
+            errmsg +="ErrorDetail：" + JSON.stringify(errorObj);
+        alert( errmsg );
+    });
+}();
+</script>

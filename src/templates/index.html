@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <% if (htmlWebpackPlugin.options.debug) { %>
+        <% include /src/templates/components/debug.html %>
+    <% } %>
+
+    <% if (htmlWebpackPlugin.options.flexible) { %>
+        <% include /src/templates/components/flexible.html %>
+    <% }else{ %>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <% } %>
+
+    <title>
+        <%= htmlWebpackPlugin.options.title %>
+    </title>
+    <style>
+        * {
+            box-sizing: inherit;
+        }
+        html {
+            font-family: "Roboto", "Helvetica Neue", "Segoe UI", Verdana, Tahoma, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+            background: #F5F5F5;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div id="app"></div>
+</body>
+</html>
