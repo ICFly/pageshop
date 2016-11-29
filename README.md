@@ -1,5 +1,4 @@
 # Pageshop is page factory
-## Build Setup
 
 ``` bash
 # install dependencies
